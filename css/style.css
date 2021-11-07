@@ -70,6 +70,43 @@ body {
     font-weight: 700;
     animation: moveInRight 1s ease-out; }
 
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #55c57a, #28b485);
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.2s;
+  letter-spacing: 2px; }
+  .heading-secondary:hover {
+    transform: skew(15deg, 2deg);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.4); }
+
+.heading-tertiary {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 2rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
 .link {
   position: relative;
   font-size: 1rem; }
@@ -109,19 +146,100 @@ body {
     .link--white::after {
       background-color: #fff; }
 
-.header {
-  position: relative;
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.4), rgba(85, 197, 122, 0.4)), url(../img/hero.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); }
-  .header__logo-box {
-    padding: 4rem; }
-  .header__text-box {
+.link-text {
+  transition: all 0.2s; }
+  .link-text:link, .link-text:visited {
+    font-size: 2rem;
+    color: #55c57a;
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #55c57a; }
+  .link-text:hover {
+    background-color: #55c57a;
+    color: #fff;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.35);
+    transform: translateY(-4px); }
+  .link-text:active {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transform: translateY(0); }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
     position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
+    transition: all 0.2s;
+    outline-offset: 1rem; }
+    .composition__photo--p1 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo--p2 {
+      right: 0;
+      top: 2rem; }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 10rem; }
+    .composition__photo:hover {
+      outline: 0.5rem solid #28b485;
+      transform: scale(1.3);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 1; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95) translateY(-0.5rem); }
+
+.header-bg {
+  background-color: #f7f7f7; }
+  .header-bg .header {
+    position: relative;
+    height: 100vh;
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.4), rgba(85, 197, 122, 0.4)), url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
+    .header-bg .header__logo-box {
+      padding: 4rem; }
+    .header-bg .header__text-box {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center; }
+
+.row:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.row [class^='col'] {
+  float: left; }
+  .row [class^='col']:not(:last-child) {
+    margin-right: 2rem; }
+
+.row .col-1-of-2 {
+  width: calc((100% - 2rem) / 2); }
+
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 2rem) / 3); }
+
+.row .col-2-of-3 {
+  width: calc(2 * ((100% - 2 * 2rem) / 3) + 2rem); }
+
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 2rem) / 4); }
+
+.row .col-2-of-4 {
+  width: calc((((100% - 3 * 2rem) / 4) * 2) + 2rem); }
+
+.row .col-3-of-4 {
+  width: calc((((100% - 3 * 2rem) / 4) * 3) + (2rem * 2)); }
+
+.row::after {
+  content: '';
+  display: table;
+  clear: both; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 10rem; }
