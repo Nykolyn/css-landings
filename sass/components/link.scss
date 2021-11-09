@@ -1,12 +1,15 @@
 .link {
   position: relative;
   font-size: 1rem;
+  border: none;
+  cursor: pointer;
 
   &--animated {
     animation: moveInTop 0.8s ease-out 0.75s;
     animation-fill-mode: backwards;
   }
 
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -17,7 +20,7 @@
     transition: all 0.2s;
   }
 
-  &:hover {
+  &:hover, &:focus {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.281);
 
@@ -65,7 +68,7 @@
 }
 
 .link-text {
-  transition: all .5s;
+  transition: all 0.5s;
   &:link,
   &:visited {
     background-image: linear-gradient($color-medium-green, $color-medium-green);
