@@ -65,9 +65,13 @@
 }
 
 .link-text {
-  transition: all 0.2s;
+  transition: all .5s;
   &:link,
   &:visited {
+    background-image: linear-gradient($color-medium-green, $color-medium-green);
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
     font-size: $default-font-size;
     color: $color-medium-green;
     display: inline-block;
@@ -77,7 +81,7 @@
   }
 
   &:hover {
-    background-color: $color-medium-green;
+    background-size: 100% 100%;
     color: $color-white;
     box-shadow: 0 1rem 2rem rgba($color: $color-black, $alpha: 0.35);
     transform: translateY(-4px);
