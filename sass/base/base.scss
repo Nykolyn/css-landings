@@ -14,3 +14,7 @@ body {
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: $color-light-green;
+  color: $color-black;
+}

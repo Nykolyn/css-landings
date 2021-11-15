@@ -148,4 +148,9 @@
     font-size: 6rem;
     font-weight: 300;
   }
+
+  // workaround when tablet is wider then variable size
+  @media screen and (max-width: $tablet), screen and (hover:none) {
+    display: none;
+  }
 }
