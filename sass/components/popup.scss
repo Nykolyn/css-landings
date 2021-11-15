@@ -10,6 +10,10 @@
   z-index: 1000;
   transition: all 0.3s;
 
+  @supports (backdrop-filter: blur(10px)) {
+    backdrop-filter: blur(10px);
+  }
+
   &:target {
     opacity: 1;
     visibility: visible;
@@ -21,7 +25,8 @@
   }
 
   &__close {
-    &:link, &:visited {
+    &:link,
+    &:visited {
       text-decoration: none;
       color: $color-grey-dark;
       position: absolute;
@@ -38,7 +43,7 @@
   }
 
   &__content {
-    transition: all .6s .2s;
+    transition: all 0.6s 0.2s;
     opacity: 0;
     @include absolute-center;
     transform: translate(-2000px, -50%) scale(0.4);
