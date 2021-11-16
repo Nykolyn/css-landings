@@ -1,3 +1,9 @@
+/*  $breakpoint argument choices:
+* - mobile
+* - tablet
+* - desktop
+* - large-desktop
+**/
 *,
 *::after,
 *::before {
@@ -10,6 +16,10 @@ h1 {
 
 body {
   box-sizing: border-box; }
+
+::selection {
+  background-color: #7ed56f;
+  color: #000; }
 
 @keyframes moveInLeft {
   0% {
@@ -330,6 +340,9 @@ body {
   .card__price-value {
     font-size: 6rem;
     font-weight: 300; }
+  @media screen and (max-width: 900px), screen and (hover: none) {
+    .card {
+      display: none; } }
 
 .story {
   width: 75%;
@@ -480,6 +493,9 @@ body {
   width: 100vw;
   z-index: 1000;
   transition: all 0.3s; }
+  @supports (backdrop-filter: blur(10px)) {
+    .popup {
+      backdrop-filter: blur(10px); } }
   .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -498,7 +514,7 @@ body {
     color: #7ed56f;
     transform: rotate(90deg); }
   .popup__content {
-    transition: all .6s .2s;
+    transition: all 0.6s 0.2s;
     opacity: 0;
     position: absolute;
     top: 50%;
@@ -536,11 +552,14 @@ body {
   .header-bg .header {
     position: relative;
     height: 100vh;
-    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.4), rgba(85, 197, 122, 0.4)), url(../img/hero.jpg);
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.4), rgba(85, 197, 122, 0.4)), url(../img/hero-small.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); }
+    @media screen and (min-resolution: 192dpi) and (min-width: 600px), (min-width: 1800px) {
+      .header-bg .header {
+        background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.4), rgba(40, 180, 133, 0.4)), url(../img/hero.jpg); } }
     .header-bg .header__logo-box {
       padding: 4rem; }
     .header-bg .header__text-box {
