@@ -1,8 +1,5 @@
 .container {
-  max-width: 120rem;
-  margin: 8rem auto;
   background-color: var(--color-grey-light-2);
-  box-shadow: var(--shadow-dark);
 }
 
 .header {
@@ -24,6 +21,9 @@
 
   flex: 0 0 18%;
   min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hotel-view {
