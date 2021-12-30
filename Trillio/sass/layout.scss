@@ -30,3 +30,26 @@
   background-color: #fff;
   flex: 1;
 }
+
+.detail {
+  display: flex;
+  padding: 4rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--bottom-line);
+}
+
+.description {
+  flex: 0 0 60%;
+  background: white;
+  box-shadow: var(--shadow-light);
+  margin-right: 2rem;
+  padding: 2rem;
+  font-size: 1.4rem;
+}
+
+.user-reviews {
+  flex: 1;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: var(--shadow-light);
+}
