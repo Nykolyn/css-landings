@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "node-sass ./Trillio/sass/main.scss ./Trillio/css/style.css -w",
+    "start": "node-sass ./nexter/sass/main.scss ./nexter/css/style.css -w",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 5 versions' css/style.concat.css -o css/style.prefix.css",
