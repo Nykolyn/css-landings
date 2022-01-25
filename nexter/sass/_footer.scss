@@ -1,5 +1,36 @@
 .footer {
   background-color: $color-secondary;
-
+  padding: 8rem;
   grid-column: full-start / full-end;
+
+  .nav {
+    list-style-type: none;
+
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+    align-items: center;
+
+    &__item a:link,
+    &__item a:visited {
+      text-decoration: none;
+      font-size: 1.4rem;
+      color: white;
+      font-family: $font-display;
+      text-transform: uppercase;
+      text-align: center;
+
+      transition: all 0.2s;
+
+      padding: 2rem;
+      display: block;
+
+      &:hover,
+      &:active {
+        background-color: rgba($color: #fff, $alpha: 0.05);
+        transform: translateY(-3px);
+      }
+    }
+  }
 }
